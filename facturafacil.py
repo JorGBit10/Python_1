@@ -64,37 +64,7 @@ def main():
 
         opcion = input("Seleccione una opción: ")
 
-        try:
-            if opcion == '1':
-                nombre = input("Nombre del producto: ")
-                cantidad = int(input("Cantidad: "))
-                precio_unitario = float(input("Precio unitario: "))
-                factura.agregar_producto(nombre, cantidad, precio_unitario)
-                print(f"¡Listo! Producto '{nombre}' agregado correctamente.")
-            
-            elif opcion == '2':
-                nombre = input("Nombre del producto a eliminar: ")
-                factura.eliminar_producto(nombre)
-                print(f"Producto '{nombre}' eliminado. Chao '{nombre}'! ")
-            
-            elif opcion == '3':
-                print("Productos en la factura:")
-                factura.mostrar_productos()
-            
-            elif opcion == '4':
-                total = factura.calcular_total()
-                print(f"TOTAL DEL PRECIO DE LA CESTA: {total}")
-            
-            elif opcion == '5':
-                print("Saliendo del programa. ¡Hasta pronto!")
-                break
-            
-            else:
-                print("Estoy un poco confundido. Creo que no te he dado esa opción... prueba de nuevo")
-        
-        except ValueError as e:
-            print(f"Error: {e}")
-        except Exception as e:
+
             print(f"Se ha producido un error inesperado: {e}")
 
 if __name__ == "__main__":
