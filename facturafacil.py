@@ -1,3 +1,4 @@
+
 tu_nombre = input("Hola buen día, puedes indicarme tu nombre? ")
 
 print("Hola", tu_nombre,", me llamo Facturafacil.py. He nacido para ayudarte a automatizar el proceso de recordar tus compras. Bienvenid@ :)")
@@ -19,9 +20,9 @@ class Factura:
         self.productos.append({'nombre': nombre, 'cantidad': cantidad, 'precio_unitario': precio_unitario})
 
     def eliminar_producto(self, nombre):
-        """
-        Elimina un producto de la factura por su nombre.
-        """
+   
+      #  Elimina un producto de la factura por su nombre.
+     
         for producto in self.productos:
             if producto['nombre'] == nombre:
                 self.productos.remove(producto)
@@ -29,9 +30,9 @@ class Factura:
         raise ValueError("No podemos eliminar algo que no existe... ¿O sí? Esas son preguntas para filósofos, no para un programa de facturación. Revisa el dator e introduce un nuevo producto por favor4")
 
     def mostrar_productos(self):
-        """
-        Muestra todos los productos en la factura.
-        """
+  
+       # Muestra todos los productos en la factura.
+    
         if not self.productos:
             print("No hay productos en la factura. Así que... no has comprado nada :( no puedo ayudarte")
         else:
@@ -39,16 +40,16 @@ class Factura:
                 print(f"Producto: {producto['nombre']}, Cantidad: {producto['cantidad']}, Precio Unitario: {producto['precio_unitario']}")
 
     def calcular_total(self):
-        """
-        Calcula y devuelve el total de la factura.
-        """
+      
+       # Calcula y devuelve el total de la factura.
+      
         total = sum(producto['cantidad'] * producto['precio_unitario'] for producto in self.productos)
         return total
 
 def main():
-    """
-    Función principal que permite la interacción del usuario con la clase Factura.
-    """
+  
+    # Función principal que permite la interacción del usuario con la clase Factura.
+ 
    
     cliente = input( " Ingrese por favor los datos del cliente: ")
     factura = Factura(cliente)
@@ -82,7 +83,7 @@ def main():
             
             elif opcion == '4':
                 total = factura.calcular_total()
-                print(f"Total del precio de la cesta: {total}")
+                print(f"TOTAL DEL PRECIO DE LA CESTA: {total}")
             
             elif opcion == '5':
                 print("Saliendo del programa. ¡Hasta pronto!")
@@ -98,4 +99,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
