@@ -1,5 +1,5 @@
 
-tu_nombre = input("Hola buen día, puedes indicarme tu nombre? ")
+tu_nombre = input("Hola buen día, puedes indicarme tu nombre? ") 
 
 print("Hola", tu_nombre,", me llamo Facturafacil.py. He nacido para ayudarte a automatizar el proceso de recordar tus compras. Bienvenid@ :)")
 
